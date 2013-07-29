@@ -1,0 +1,9 @@
+name: P-M-DebugRequestParams
+version: 1.00
+description: This plugin applies Plack::Middleware::DebugRequestParams to the Movable Type.
+
+plack_middlewares:
+  - name: DebugRequestParams
+    condition: sub { MT->config->DebugMode }
+    apply_to:
+      - all
